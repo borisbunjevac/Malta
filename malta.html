@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+    </head>
+    <body>
+       <p>Click the buttons to sort car objects on age.</p>
+
+<button onclick="myFunction()">Sort</button>
+
+<p id="demo"></p>
+
+<script>
+var beatles = [
+{name:"John", year:20},
+{name:"Pol", year:18},
+{name:"George", year:19}]
+
+displayBeatles();
+
+function myFunction() {
+    beatles.sort(function(a, b){return a.year - b.year});
+    displayBeatles();
+}
+
+function displayBeatles() {
+  document.getElementById("demo").innerHTML =
+  beatles[0].name + " " + beatles[0].year + "<br>" +
+  beatles[1].name + " " + beatles[1].year + "<br>" +
+  beatles[2].name + " " + beatles[2].year;
+}
+</script> 
+    </body>
+</html>
